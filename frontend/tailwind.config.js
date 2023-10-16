@@ -2,22 +2,14 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-
   mode :'jit',
   
   content: [
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-
-    
-
     extend: {
-
-      
-
       colors:{
-
         // Web
         primary:'#823598',
         primary_dark:'#4B205A',
@@ -56,52 +48,48 @@ module.exports = {
         
       },
 
-
       // Typograph
       //   Used fontWeight as a values instead of args(bold,semi-bold) 
       //   as stylesheet and tailwind css following different standards
-          fontSize:{
-            h1:[  '94px'  , {lineHeight: '60px', fontWeight: '300'}],
-            h2:[  '58px'  , {lineHeight: '48px', fontWeight: '300'}],
-            h3:[  '46px'  , {lineHeight: '32px', fontWeight: '500'}],
-            h4:[  '34px'  , {lineHeight: '32px', fontWeight: '500'}],
-            h5:[  '24px'  , {lineHeight: '28px', fontWeight: '600'}],
-            h6:[  '20px'  , {lineHeight: '28px', fontWeight: '500'}],
-            subtitle1:[  '20px'  , {lineHeight: '28px', fontWeight: '400'}],
-            subtitle2:[  '14px'  , {lineHeight: '24px', fontWeight: '500'}],
-            body1:[  '16px'  , {lineHeight: '24px', fontWeight: '400'}],
-            body2:[  '14px'  , {lineHeight: '20px', fontWeight: '400'}],
-            button:[  '16px'  , {lineHeight: '24px', fontWeight: '600'}],
-            caption:[  '12px'  , {lineHeight: '20px', fontWeight: '400'}],
-            overline:[  '10px'  , {lineHeight: '20px', fontWeight: '400'}],
-          },
-      
-  
-
-         
-  
-  
-      screens: {
-        tablet : '48px',
-        desktop: '1248px',
+      fontSize:{
+        h1:[  '94px'  , {lineHeight: '60px', fontWeight: '300'}],
+        h2:[  '58px'  , {lineHeight: '48px', fontWeight: '300'}],
+        h3:[  '46px'  , {lineHeight: '32px', fontWeight: '500'}],
+        h4:[  '34px'  , {lineHeight: '32px', fontWeight: '500'}],
+        h5:[  '24px'  , {lineHeight: '28px', fontWeight: '600'}],
+        h6:[  '20px'  , {lineHeight: '28px', fontWeight: '500'}],
+        subtitle1:[  '20px'  , {lineHeight: '28px', fontWeight: '400'}],
+        subtitle2:[  '14px'  , {lineHeight: '24px', fontWeight: '500'}],
+        body1:[  '16px'  , {lineHeight: '24px', fontWeight: '400'}],
+        body2:[  '14px'  , {lineHeight: '20px', fontWeight: '400'}],
+        button:[  '16px'  , {lineHeight: '24px', fontWeight: '600'}],
+        caption:[  '12px'  , {lineHeight: '20px', fontWeight: '400'}],
+        overline:[  '10px'  , {lineHeight: '20px', fontWeight: '400'}],
       },
-  
-  
-  
+
+      fontFamily: {
+        Light: "Famosa-Light-Demo",
+        Gilroy: "Gilroy-Light",
+        Bold: "Gilroy-ExtraBold",
+        TeX: "TeX Gyre Schola",
+        Famosa: "Famosa",
+        Margaret: "Margaret",
+        Butler: "Butler"
+        
+      },
+
+      letterSpacing: {
+        wide: '0.05em',
+        widest:'.15em'
+      },
+      
+
       boxShadow:{
         bottom : '0px 4px     rgba(90, 90, 90, .08)', 
         top:   '0px -4px   rgba(90, 90, 90, 0.08)',
         center:  '0px 1px   rgba(90, 90, 90, 0.08)',
       },
-  
-  
-  
-  //
-
-
-
     },
   },
   plugins: [],
-
 }

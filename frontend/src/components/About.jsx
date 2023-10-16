@@ -1,10 +1,4 @@
 import React from 'react';
-import dhruv from '../assets/Dhruv.jpeg'
-import nanak from '../assets/nanak.jpg'
-import saira from '../assets/saira.jpg'
-import rawal from '../assets/rawal.jpeg'
-import sarthak from '../assets/sarthak-garg.jpeg'
-import uttam from '../assets/uttam.jpg'
 
 const About = () => {
     return (
@@ -39,97 +33,6 @@ const About = () => {
                 <p className="text-lg mt-8">
                     Stay ahead of avalanche risks with <b>Mountain Guardian</b>. Your safety is our top priority.
                 </p>
-            </div>
-
-
-            <h1 className="text-4xl font-semibold text-center m-5 mt-8">Developers Team</h1>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 mx-auto justify-center">
-                <div className="bg-white p-6 rounded-lg shadow-md flex">
-                    <img
-                        src={uttam}
-                        alt="Uttam Mittal"
-                        className="w-48 h-48 object-cover rounded-full"
-                    />
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold">Uttam Mittal</h3>
-                        <p className="text-base text-gray-600">ML Engineer</p>
-                    </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md flex">
-                    <img
-                        src={dhruv}
-                        alt="Dhruv Bansal"
-                        className="w-48 h-48 object-cover rounded-full"
-                    />
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold">Dhruv Bansal</h3>
-                        <p className="text-base text-gray-600">Frontend Developer</p>
-                    </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md flex">
-                    <img
-                        src={nanak}
-                        alt="Nanakjot Singh"
-                        className="w-48 h-48 object-cover rounded-full"
-                    />
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold">Nanakjot Singh</h3>
-                        <p className="text-base text-gray-600">Backend Developer</p>
-                    </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md flex">
-                    <img
-                        src={rawal}
-                        alt="Abhinav Rawal"
-                        className="w-48 h-48 object-cover rounded-full"
-                    />
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold">Abhinav Rawal</h3>
-                        <p className="text-base text-gray-600">Backend Developer</p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 mx-auto justify-center place-items-center">
-                <div className="bg-white p-6 rounded-lg flex">
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold"></h3>
-                        <p className="text-base text-gray-600"></p>
-                    </div>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md flex">
-                    <img
-                        src={sarthak}
-                        alt="Sarthak Garg"
-                        className="w-48 h-48 object-cover rounded-full"
-                    />
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold">Sarthak Garg</h3>
-                        <p className="text-base text-gray-600">ML Engineer</p>
-                    </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md flex">
-                    <img
-                        src={saira}
-                        alt="Saira Garg"
-                        className="w-48 h-48 object-cover rounded-full"
-                    />
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold">Saira Garg</h3>
-                        <p className="text-base text-gray-600">Data analyst</p>
-                    </div>
-                </div>
-                <div className="bg-white p-6 rounded-lg flex">
-                    <div className="ml-4">
-                        <h3 className="text-xl font-semibold"></h3>
-                        <p className="text-base text-gray-600"></p>
-                    </div>
-                </div>
             </div>
 
         </div>
