@@ -17,18 +17,18 @@ const Home = () => {
             <Model />
         </div>
         <img 
-            className='z-2 absolute top-4 left-6'
+            className='z-2 absolute top-6 left-10'
             src={logo}>
         </img>
         
-        <IconButton sx={{color: "white", position: "absolute", top: "1rem", right: "1rem"}}>
+        <IconButton sx={{color: "white", position: "absolute", top: "1rem", right: "2rem"}}>
             <InfoOutlinedIcon />
         </IconButton>
   
         <div className='z-1 absolute'>
             <div className='flex flex-col justify-center items-center'>
                 <div className={`text-white text-center p-4 opacity-0 ${isAnimated ? 'animate-fadeIn' : ''}`} >
-                    <div className='font-Bold text-7xl gradient'>Snow's watchful eye.</div>
+                    <div className='font-Bold text-7xl gradient drop-shadow'>Snow's watchful eye.</div>
                     
                     <div className='font-Gilroy font-bold text-xs flex justify-center items-center smol-gradient'> 
                         <div className='border-t-2 border-white w-1/12 mx-2' />

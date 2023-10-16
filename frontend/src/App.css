@@ -52,8 +52,8 @@
 
 .gradient {
   --bg-size: 400%;
-  --color-one: rgb(251, 251, 251);
-  --color-two: rgb(191, 190, 190);
+  --color-one: rgb(255, 255, 255);
+  --color-two: rgb(83, 83, 83);
   background: linear-gradient(
                 90deg,
                 var(--color-one),
@@ -63,14 +63,14 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: move-bg 40s infinite linear;
+  animation: move-bg 40s linear;
 }
 
 
 .smol-gradient {
   --bg-size: 600%;
   --color-one: rgb(251, 251, 251);
-  --color-two: rgb(182, 180, 180);
+  --color-two: rgb(204, 204, 204);
   background: linear-gradient(
                 45deg,
                 var(--color-one),
@@ -80,7 +80,7 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: move-bg 40s infinite linear;
+  animation: move-bg 40s  linear;
 }
 
 @keyframes move-bg {
