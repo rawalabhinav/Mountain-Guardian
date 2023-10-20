@@ -20,7 +20,7 @@ const Map = () => {
     const markerRef = useRef(null);
     const [latitude, setLatitude] = useState(30.73);
     const [longitude, setLongitude] = useState(76.77);
-    const [openModal, setOpenModal] = useState(true);
+    const [openModal, setOpenModal] = useState(false);
     const [zoom, setZoom] = useState(5);
 
     /* Todo: 
@@ -66,12 +66,12 @@ const Map = () => {
                 onClick={handleMapClick}
                 options={{fullscreenControl: false}}
             >   
-                <InfoWindow
+                {/* <InfoWindow
                     position={{lat: latitude, lng: longitude}}
                     options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
                     >
                     <div className='text-black text-xs font-normal font-sans'>Info Window</div>
-                </InfoWindow>
+                </InfoWindow> */}
                 <Marker
                     ref={markerRef}
                     position={{lat: latitude, lng: longitude}}
