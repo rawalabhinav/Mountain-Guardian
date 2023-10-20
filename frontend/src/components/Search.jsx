@@ -4,21 +4,20 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Search = () => {
     return (
-    <div className='z-1 absolute top-2 right-2 w-1/4'>
+    <div className='z-1 absolute top-6 inset-x-1/2 transform -translate-x-1/2 w-1/4'>
         <form className='relative'>  
             <label htmlFor="Search"></label> 
             <input 
-                type="search" 
+                type="text" 
                 id="Search"
-                className="shadow-md w-full pl-3 pr-10 py-1.5 text-sm absolute left-0 bg-white rounded-sm focus:outline-none hover:bg-gray-200 focus:bg-white placeholder-gray-600" 
+                className="shadow-md h-12 w-full pl-4 pr-10 py-1.5 text-base absolute left-0 bg-white rounded-lg focus:outline-none hover:bg-gray-200 focus:bg-white placeholder-gray-600" 
                 placeholder="Search" 
             />
-            <button 
-                type="submit" 
-                className="absolute top-0.5 right-1 text-gray-400 focus:outline-none hover:text-gray-900 "
+            <div 
+                className="absolute right-2 top-2 text-gray-400 focus:outline-none hover:text-gray-600 "
             >
                 <SearchIcon />
-            </button>
+            </div>
         </form>
     </div>
     );

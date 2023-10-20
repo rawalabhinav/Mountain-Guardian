@@ -1,7 +1,9 @@
 import React, {useState, useMemo, useRef} from 'react';
+import { Link } from 'react-router-dom';
 import {GoogleMap, useLoadScript, Marker, OverlayView, InfoWindow} from "@react-google-maps/api"
 import Search from './Search';
 import Modal from './Modal';
+import logo from '../assets/Logo.svg';
 
 const LIBRARIES = ["places"];
 const INFO_OPTIONS = { closeBoxURL: '', enableEventPropagation: true};
@@ -64,14 +66,23 @@ const Map = () => {
                 center={center}
                 mapContainerClassName="map-container"
                 onClick={handleMapClick}
-                options={{fullscreenControl: false}}
+                options={{
+                    fullscreenControl: false,
+                    mapTypeControlOptions: {
+                        position: 6.0, 
+                        mapTypeIds: [
+                            "roadmap",
+                            "satellite",
+                            "hybrid",
+                          ]}
+                }}
             >   
-                {/* <InfoWindow
+                <InfoWindow
                     position={{lat: latitude, lng: longitude}}
                     options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
                     >
                     <div className='text-black text-xs font-normal font-sans'>Info Window</div>
-                </InfoWindow> */}
+                </InfoWindow>
                 <Marker
                     ref={markerRef}
                     position={{lat: latitude, lng: longitude}}
@@ -89,6 +100,13 @@ const Map = () => {
                 </OverlayView>
             </GoogleMap>
         </div>
+        <Link to="/"> 
+            <img 
+                className='z-1 h-12 absolute top-6 left-10 bg-black rounded-lg py-2 px-3 shadow'
+                src={logo}
+                >
+            </img>
+        </Link>
         <Search />
       </div>
     );

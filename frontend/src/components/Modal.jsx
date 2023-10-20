@@ -67,7 +67,7 @@ const Modal = ({isModalOpen, setModalState, coords}) => {
                 <p className='m-3'>Find the chances of avalanche here in the next ten days </p>
                 <div className="flex items-center justify-center mb-4">
                     <button 
-                        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold mx-2 py-2 px-4 rounded"
+                        className="bg-black hover:bg-gray-700 text-white font-semibold mx-2 py-2 px-4 rounded"
                         onClick={handleClick}
                     >
                         Find
