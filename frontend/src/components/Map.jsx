@@ -1,12 +1,24 @@
 import React, {useState, useMemo, useRef} from 'react';
 import { Link } from 'react-router-dom';
-import {GoogleMap, useLoadScript, Marker, OverlayView, InfoWindow} from "@react-google-maps/api"
+import {GoogleMap, useLoadScript, Marker, OverlayView, InfoWindow, DrawingManager, Circle} from "@react-google-maps/api";
 import Search from './Search';
 import Modal from './Modal';
 import logo from '../assets/Logo.svg';
 
-const LIBRARIES = ["places"];
+const LIBRARIES = ["places", "drawing"];
 const INFO_OPTIONS = { closeBoxURL: '', enableEventPropagation: true};
+
+const options = {
+    strokeOpacity: 0,
+    fillColor: '#000000',
+    fillOpacity: 0.15,
+    clickable: false,
+    draggable: true,
+    editable: false,
+    visible: true,
+    radius: 3000,
+    zIndex: 1
+}
 
 const Map = () => {
     const {isLoaded} = useLoadScript({
@@ -50,6 +62,7 @@ const Map = () => {
             setOpenModal(false);
         }
 
+        console.log('hellomap')
         setLatitude(e.latLng.lat());
         setLongitude(e.latLng.lng());
     };
@@ -77,12 +90,25 @@ const Map = () => {
                           ]}
                 }}
             >   
-                <InfoWindow
+                {/* <Circle
+                    center={{lat: latitude, lng: longitude}}
+                    options={options}
+                /> */}
+            <div className='z-2 bg-white h-full'>
+                <DrawingManager 
+                options={{
+                    drawingControl: true,
+                    polygonOptions: { editable: true },drawingControlOptions: {
+                    position: 3.0,
+                }}}
+            />
+            </div>
+                {/* <InfoWindow
                     position={{lat: latitude, lng: longitude}}
                     options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
                     >
                     <div className='text-black text-xs font-normal font-sans'>Info Window</div>
-                </InfoWindow>
+                </InfoWindow> */}
                 <Marker
                     ref={markerRef}
                     position={{lat: latitude, lng: longitude}}

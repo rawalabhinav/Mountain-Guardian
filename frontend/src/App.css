@@ -33,6 +33,31 @@
   height: 100vh;
 }
 
+a[href^="https://maps.google.com/maps"]{
+  display:none !important
+} 
+
+.gmnoprint {
+  padding-bottom: 30px;
+}
+
+.gmnoprint span {
+  padding: 10px !important;
+  right: 2rem;
+  top: 2rem;
+  border-radius: 50%;
+}
+
+div.gmnoprint { 
+  padding-top: 24px; 
+  padding-right: 40px;
+  
+}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+} 
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
