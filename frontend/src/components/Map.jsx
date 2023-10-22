@@ -35,6 +35,7 @@ const Map = () => {
     const [latitude, setLatitude] = useState(30.73);
     const [longitude, setLongitude] = useState(76.77);
     const [openModal, setOpenModal] = useState(false);
+    const [searchFocus, setSearchFocus] = useState(false);
     const [zoom, setZoom] = useState(5);
 
     /* Todo: 
@@ -62,7 +63,8 @@ const Map = () => {
             setOpenModal(false);
         }
 
-        console.log('hellomap')
+        console.log('hellomap');
+        setSearchFocus(false);
         setLatitude(e.latLng.lat());
         setLongitude(e.latLng.lng());
     };
@@ -133,7 +135,9 @@ const Map = () => {
                 >
             </img>
         </Link>
-        <Search />
+        <Search 
+            focused={searchFocus}
+            setFocused={setSearchFocus}/>
       </div>
     );
 };
