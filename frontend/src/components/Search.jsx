@@ -4,7 +4,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import usePlacesAutocomplete, {getGeocode, getLatLng} from "use-places-autocomplete";
 
-const Search = ({focused, setFocused}) => {
+const Search = ({focused, setFocused, setLat, setLng}) => {
     const {
         ready,
         value,
@@ -19,7 +19,8 @@ const Search = ({focused, setFocused}) => {
         clearSuggestions();
         const results = await getGeocode({ address });
         const { lat, lng } =  getLatLng(results[0]);
-        // setSelected({ lat, lng });
+        setLat(lat);
+        setLng(lng);
     };
 
     return (

@@ -1,4 +1,4 @@
-import React, {useState, useMemo, useRef} from 'react';
+import React, {useState, useMemo, useRef, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {GoogleMap, useLoadScript, Marker, OverlayView, InfoWindow, DrawingManager, Circle} from "@react-google-maps/api";
 import Search from './Search';
@@ -36,6 +36,7 @@ const Map = () => {
     const [longitude, setLongitude] = useState(76.77);
     const [openModal, setOpenModal] = useState(false);
     const [searchFocus, setSearchFocus] = useState(false);
+    const [markerAnimation, setMarkerAnimation] = useState(null);
     const [zoom, setZoom] = useState(5);
 
     /* Todo: 
@@ -59,15 +60,23 @@ const Map = () => {
     */
 
     const handleMapClick = (e) => {
-        if (openModal){
+        if (openModal || searchFocus){
             setOpenModal(false);
+            setSearchFocus(false);
+            return;
         }
 
-        console.log('hellomap');
-        setSearchFocus(false);
         setLatitude(e.latLng.lat());
         setLongitude(e.latLng.lng());
     };
+
+    useEffect(() => {
+        if (openModal){
+            setMarkerAnimation(1.0);
+        } else {
+            setMarkerAnimation(null);
+        }
+    }, [openModal]);
 
     if (!isLoaded){
         return <div>Loading...</div>
@@ -115,6 +124,7 @@ const Map = () => {
                     ref={markerRef}
                     position={{lat: latitude, lng: longitude}}
                     onClick={() => setOpenModal(true)}
+                    animation={markerAnimation}
                 />
                 <OverlayView 
                     position={{lat: latitude, lng: longitude}}
@@ -137,7 +147,9 @@ const Map = () => {
         </Link>
         <Search 
             focused={searchFocus}
-            setFocused={setSearchFocus}/>
+            setFocused={setSearchFocus}
+            setLat={setLatitude}
+            setLng={setLongitude} />
       </div>
     );
 };
