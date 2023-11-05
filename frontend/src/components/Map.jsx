@@ -30,10 +30,10 @@ const Map = () => {
     ** Upon zoom the entire GoolgleMap component re(lazy)loads thus 
     ** we need to memoise the center
     */
-    const center = useMemo(() => ({lat: 30.73, lng: 76.77}) , []);
+    const center = useMemo(() => ({lat: 56.87, lng: 24.60}) , []);
     const markerRef = useRef(null);
-    const [latitude, setLatitude] = useState(30.73);
-    const [longitude, setLongitude] = useState(76.77);
+    const [latitude, setLatitude] = useState(56.87);
+    const [longitude, setLongitude] = useState(24.60);
     const [openModal, setOpenModal] = useState(false);
     const [searchFocus, setSearchFocus] = useState(false);
     const [markerAnimation, setMarkerAnimation] = useState(null);
