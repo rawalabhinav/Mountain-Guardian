@@ -8,34 +8,41 @@ Mountain Guardian is a real-time Avalanche detection software equipped with repo
 2. [Technologies Used](#technologies-used)
 3. [Getting Started](#getting-started)
 4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [License](#license)
+5. [Contributing](#contributing)
+6. [License](#license)
 
 ## Overview
 
-Mountain Guardian is a sophisticated system designed to provide real-time avalanche detection and analysis. It harnesses the power of various technologies and data sources to offer a comprehensive solution for monitoring and understanding avalanche conditions. Here's a breakdown of the components:
+![Mountain Guardian](assets/Landing.png)
 
-- **Frontend**: The frontend is built using React, React Three Fiber, Tailwind CSS, React-Google-Maps library, and Leaflet for heatmaps. It provides users with an intuitive interface for interacting with the system, including real-time data visualization and tools for drawing custom polygons.
+Mountain Guardian is a sophisticated system designed to provide real-time avalanche detection and analysis. It harnesses the power of various technologies and data sources to offer a comprehensive solution for monitoring and understanding avalanche conditions. Here's a breakdown of the main features:
 
-- **Backend**: The backend is implemented in Spring Boot, offering a robust and scalable infrastructure for handling data processing, storage, and communication between the frontend and machine learning components.
+1. **Real time satellite Data Acquisition**: 
 
-- **Machine Learning**: The machine learning aspect of Mountain Guardian utilizes various techniques, including change detection, LSTM (Long Short-Term Memory), and ResNet models implemented using TensorFlow/Keras. These models are responsible for analyzing the satellite data and providing real-time avalanche risk predictions.
+2. **Geospatial Filtering**: 
+
+3. **Polygon Drawing Tool**: 
+
+4. **Report Generation**:
+
+5. **Analytics Dashboard**:
 
 ## Technologies Used
 
-- Frontend:
+- **Frontend**:
   - React
   - React Three Fiber
-  - Tailwind CSS
+  - Tailwind CSS and MaterialUI
   - React-Google-Maps library
   - Leaflet
 
-- Backend:
-  - Spring Boot
+- **Backend**:
+  - Flask
 
-- Machine Learning:
+- **Machine Learning**:
   - TensorFlow/Keras
+
+   The machine learning aspect of Mountain Guardian utilizes various techniques, including change detection, LSTM (Long Short-Term Memory), and ResNet models implemented using TensorFlow/Keras. These models are responsible for analyzing the satellite data and providing real-time avalanche risk predictions.
 
 ## Getting Started
 
@@ -96,18 +103,6 @@ To get started, see [Requirements](#requirements) and
     $ cd ../backend
     $ ./mvnw spring-boot:run
     ```
-
-## Usage
-
-1. **Satellite Data Acquisition**: 
-
-2. **Geospatial Filtering**: 
-
-3. **Polygon Drawing Tool**: 
-
-4. **Report Generation**:
-
-5. **Analytics Dashboard**:
 
 ## Contributing
 
